@@ -1,6 +1,7 @@
 package sdu.cs58.krichapol.trafficsignapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,5 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });//end setOnItemClickListener
     }//end Method onCreate
+    public void clickLink(View view){
+        Intent linkIntent = new Intent(Intent.ACTION_VIEW);
+        linkIntent.setData(Uri.parse("https://www.dlt.go.th/th/"));
+        startActivity(linkIntent);
+    }//end clickLink Method
 
+    public void clickMe(View view){
+
+    }
 }//end class
