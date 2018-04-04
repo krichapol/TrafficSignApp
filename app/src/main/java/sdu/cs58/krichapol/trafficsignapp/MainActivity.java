@@ -1,7 +1,10 @@
 package sdu.cs58.krichapol.trafficsignapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +31,17 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, ints, titleStrings, detailStrings);
         listView.setAdapter(myAdapter);
 
+        //เมื่อกดแต่ละ Item ใน Listview จะเชื่อมโยงไปหน้า Detail
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent detailIntent = new Intent(MainActivity.this, DetailActivity.class);
+                detailIntent.putExtra("Title", titleStrings[i]);
+                detailIntent.putExtra("Detail", detailStrings[i]);
+                detailIntent.putExtra("Image", ints[i]);
+                startActivity(detailIntent);
+            }
+        });//end setOnItemClickListener
     }//end Method onCreate
 
 }//end class
