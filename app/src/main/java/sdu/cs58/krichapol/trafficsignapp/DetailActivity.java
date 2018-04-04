@@ -23,5 +23,11 @@ public class DetailActivity extends AppCompatActivity {
         titleTextView = findViewById(R.id.txvTitle);
         detailTextView = findViewById(R.id.txvDetail);
         signImageView = findViewById(R.id.imvSign);
+
+        //รับข้อมูลจากการ Intent ไปแสดงบนหน้า XML
+        titleTextView.setText(getIntent().getStringExtra("Title"));
+        detailTextView.setText(getIntent().getStringExtra("Detail"));
+        signImageView.setImageResource(getIntent().getIntExtra("Image",R.drawable.traffic_01));
+
     }//end onCreate Method
 }//end Class
