@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ป้ายจราจรน่ารู้</string>
+    <string name="my_name">ชื่อ-สกุล: นายกริชพล อิสระสกุลพงศ์</string>
+    <string name="my_major">หลักสูตรวิทยาการคอมพิวเตอร์ คณะวิทยศาสตร์และเทคโนโลยี</string>
+    <string name="my_university">มหาวิทยาลัยสวนดุสิต</string>
+    <string name="my_mobile">Mobile No.: 0971011835</string>
+    <string name="my_facebook">Facebook: https://www.facebook.com/UltimaTar.The.Hedgehog</string>
 </resources>

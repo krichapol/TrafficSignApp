@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(linkIntent);
     }//end clickLink Method
 
-    public void clickMe(View view){
-
-    }
+    public void clickAboutMe(View view) {
+        Intent aboutMeIntent = new Intent(MainActivity.this, AboutMeActivity.class);
+        startActivity(aboutMeIntent);
+    }//end clickAboutMe Method
 }//end class
